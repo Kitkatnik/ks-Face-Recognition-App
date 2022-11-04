@@ -25,9 +25,8 @@ class App extends React.Component {
     this.state = {
       input: '',
       imageUrl: '',
-      box: {
-
-      }
+      box: {},
+      route: 'signin'
     }
   }
   onInputChange = (event) => {
@@ -78,6 +77,11 @@ class App extends React.Component {
 
       .catch(error => console.log('error', error));
   }
+
+  onRouteChange = (route) => {
+    
+    this.setState({route});
+  }
   render(){
     return (
       <div className="App">
@@ -88,15 +92,19 @@ class App extends React.Component {
           num={100} 
           bg={true} 
         />
-        <Navigation />
-        <Signin />
-        <Logo />
-        <Rank />
-        <ImageLinkForm 
-          onInputChange={this.onInputChange} 
-          onButtonSubmit={this.onButtonSubmit} 
-        />
-        <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
+        <Navigation onRouteChange={this.onRouteChange} />
+        { this.state.route === 'signin' 
+          ? <Signin onRouteChange={this.onRouteChange} />
+          : <div>
+            <Logo />
+            <Rank />
+            <ImageLinkForm 
+              onInputChange={this.onInputChange} 
+              onButtonSubmit={this.onButtonSubmit} 
+            />
+            <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} />
+          </div>
+        }
       </div>
     )
   }
