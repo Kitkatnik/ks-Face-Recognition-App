@@ -9,6 +9,7 @@ import Logo from "./components/Logo/Logo";
 import Rank from "./components/Rank/Rank";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
+import Signin from './components/Signin/Signin';
 
 const USER_ID = 'adhdcoder';
 // Your PAT (Personal Access Token) can be found in the portal under Authentification
@@ -88,6 +89,7 @@ class App extends React.Component {
           bg={true} 
         />
         <Navigation />
+        <Signin />
         <Logo />
         <Rank />
         <ImageLinkForm 
