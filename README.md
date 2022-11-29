@@ -4,7 +4,7 @@
 
 ![screely-1668830774636](https://user-images.githubusercontent.com/5871075/202833841-70e739a8-97b3-4a40-b0e3-60e60af39c2d.png)
 
-[Click Here to Demo](https://kitkatnik.github.io/face-recognition/)
+[Click Here to Demo](https://kitkatnik.github.io/ks-face-recognition/)
 
 </div>
 
